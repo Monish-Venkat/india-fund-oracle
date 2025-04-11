@@ -20,13 +20,13 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch, isLoading }) => {
   };
 
   const exampleQueries = [
-    "ICICI infra",
-    "SBI tech growth",
-    "High return funds",
-    "Get tax funds",
-    "Funds with HDFC holdings",
-    "Get funds from tech sector",
-    "Get funds whose AUM is greater than 1000cr"
+    "Find me large-cap funds",
+    "Which funds have low expense ratio?",
+    "Show dividend yield stocks",
+    "Compare HDFC and SBI mutual funds",
+    "Which debt funds are safe?",
+    "Funds suitable for retirement",
+    "Best performing IT sector funds"
   ];
 
   return (
@@ -36,14 +36,14 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch, isLoading }) => {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-blue-500" />
-              <h3 className="text-lg font-medium text-gray-800">AI-Powered Financial Search</h3>
+              <h3 className="text-lg font-medium text-gray-800">Ask Any Financial Question</h3>
             </div>
             
             <div className="flex w-full items-center space-x-2 mt-2">
               <div className="relative flex-grow">
                 <Input
                   type="text"
-                  placeholder="Search for funds, stocks, or ask a question..."
+                  placeholder="Ask about funds, stocks, market trends, or financial advice..."
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   className="pl-10 pr-4 py-7 text-lg rounded-lg border-2 border-gray-200 focus:border-blue-500 shadow-sm"
@@ -62,7 +62,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch, isLoading }) => {
         </form>
         
         <div className="mt-6">
-          <span className="text-sm text-gray-500 font-medium">Popular searches:</span>
+          <span className="text-sm text-gray-500 font-medium">Try asking about:</span>
           <div className="flex flex-wrap gap-2 mt-2">
             {exampleQueries.map((example, index) => (
               <button
